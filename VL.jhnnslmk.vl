@@ -1743,7 +1743,7 @@
           <Link Id="KRVKuPLsuXUQCFFquGm1gD" Ids="PdLBnyB6SgBO7y4pVkD9PQ,Um976GWSnr2QQwONNgCtr1" IsHidden="true" />
         </Patch>
       </Node>
-      <Canvas Id="TnwzGtBt629PgGdjItOoCO" Name="VVVV" Position="1122,752" DefaultCategory="VVVV.jhnnslmk" CanvasType="FullCategory">
+      <Canvas Id="TnwzGtBt629PgGdjItOoCO" Name="VVVV" Position="38,373" DefaultCategory="VVVV.jhnnslmk" CanvasType="FullCategory">
         <!--
 
     ************************ CameraState (Join 3d) ************************
@@ -3713,6 +3713,94 @@
             <Pin Id="BOJUGYjJSO2O7fgaxUYjAI" Name="Output" Kind="OutputPin" Bounds="1117,87" />
             <Link Id="Md5y6o4H2PFPuDJix4C7DY" Ids="EtVC6uMOsjKPoRals9aXy5,DAEDQ6oUvOLMUxq6rIURl9" />
             <Link Id="JAKA90tCguqLWRbQZyW0BO" Ids="PAP4hWZxhJSMD2mIOiUNVN,IaiOzQyaIEYNFMqaOl553o" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Queue (3d) ************************
+
+-->
+        <Node Name="Queue (3d)" Bounds="-315,269" Id="HmEOwYpTUpTLcDNJ0f9st1">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="R1FoLZr1OvAOATttO3kyp6">
+            <Canvas Id="L0Uqc022oSiLhgpPQqkrmI" CanvasType="Group">
+              <Node Bounds="317,315" AutoConnect="true" Id="BCje4WgcsqNMyGWAJsqni8">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Queue" />
+                </p:NodeReference>
+                <Pin Id="HkMLAZY0Dg3N6a0Y6fiTED" Name="Input" Kind="InputPin" />
+                <Pin Id="Nmd50tx26yDMv4YIBH8Hni" Name="Frame Count" Kind="InputPin" />
+                <Pin Id="HB6KqFkPhZHOLPbPqzuxjz" Name="Clear" Kind="InputPin" />
+                <Pin Id="H4qhYdyx4g2PL2Ct9VuzOA" Name="Insert" Kind="InputPin" />
+                <Pin Id="LAInFSjP7htMd4GGRcJgiH" Name="Output" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="NO6Z0SciFRqLFqIBezF9Im" Bounds="318,255" />
+            </Canvas>
+            <Patch Id="SE66LXYSfUnMTSp3Prb1uI" Name="Create" />
+            <Patch Id="USZWNDMfiQ9NBTjK1gTbos" Name="Update">
+              <Pin Id="GTZBDeQvUkwPSnCL9Oyycl" Name="Frame Count" Kind="InputPin" />
+              <Pin Id="B23zY96EkzEL4jAEL4ECZ2" Name="Clear" Kind="InputPin" />
+              <Pin Id="TE0ona1QzuJPsOMdzg6GTL" Name="Insert" Kind="InputPin" />
+              <Pin Id="OrgJSKD8TD1LWJYGyov0C6" Name="Input" Kind="InputPin" Bounds="320,248">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Vector3" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="JWqVCc00UP6MR14DbwcMFb" Name="Output" Kind="OutputPin" />
+            </Patch>
+            <ProcessDefinition Id="At3X1JofIxeMeKiQ6vQX4q">
+              <Fragment Id="Ijg2Jt20TjkOMlwD0q8vMD" Patch="SE66LXYSfUnMTSp3Prb1uI" Enabled="true" />
+              <Fragment Id="D8IcFldiNC3PuTxhE6pKxx" Patch="USZWNDMfiQ9NBTjK1gTbos" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="S3jBtW5pZrtNugvXBjNF6q" Ids="NO6Z0SciFRqLFqIBezF9Im,HkMLAZY0Dg3N6a0Y6fiTED" />
+            <Link Id="U64XHiTl1WXQbvw8flMVEN" Ids="OrgJSKD8TD1LWJYGyov0C6,NO6Z0SciFRqLFqIBezF9Im" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Queue (Transform) ************************
+
+-->
+        <Node Name="Queue (Transform)" Bounds="-312,313" Id="SxwsCVoSu8wNtgZE6PwEyr">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="PdWbP7X7XjBLztXuYBCrwo">
+            <Canvas Id="ObQux5IBoMsO8vkDJ7Xquq" CanvasType="Group">
+              <Node Bounds="317,315" AutoConnect="true" Id="CtFeyM2zArcLnKxwVTkGGR">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Queue" />
+                </p:NodeReference>
+                <Pin Id="K6CLSTGF1bVMO5PDSZdm8n" Name="Input" Kind="InputPin" />
+                <Pin Id="ADMtf7HVcuLLRTLeDOYsgP" Name="Frame Count" Kind="InputPin" />
+                <Pin Id="DO5tgWxXLhHPAXo2Q27ylH" Name="Clear" Kind="InputPin" />
+                <Pin Id="SyBHnXvX3kgM9xpsTddxwF" Name="Insert" Kind="InputPin" />
+                <Pin Id="VAyUVrQILatNbP3x7wANzP" Name="Output" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="F0pcfCRkP0ILmo2esA3F06" Bounds="318,255" />
+            </Canvas>
+            <Patch Id="V2w4CUG8ndfOYKbtPpkWdB" Name="Create" />
+            <Patch Id="MpUGKDEjF1SPUYdB7y0PdP" Name="Update">
+              <Pin Id="DqAv5TNrjUGLYLrwKOp8rz" Name="Frame Count" Kind="InputPin" />
+              <Pin Id="P4gIAPvIQVfOsvAgHXqiz1" Name="Clear" Kind="InputPin" />
+              <Pin Id="Hcx8t3RBwhcNOoeoQUPER9" Name="Insert" Kind="InputPin" />
+              <Pin Id="NxpsbUX9mgjNG0swLAK9Rz" Name="Input" Kind="InputPin" Bounds="320,248">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Matrix" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="LNkiZagopDsLc8ANBW67NB" Name="Output" Kind="OutputPin" />
+            </Patch>
+            <ProcessDefinition Id="IE5aVpPW5Y3PGxArMRewUU">
+              <Fragment Id="LWjnT5oTMdQP31pddHxMOa" Patch="V2w4CUG8ndfOYKbtPpkWdB" Enabled="true" />
+              <Fragment Id="HlrpsMhGEquPT17bE0J025" Patch="MpUGKDEjF1SPUYdB7y0PdP" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="IPYadDdvabYLt5FAoN6orA" Ids="F0pcfCRkP0ILmo2esA3F06,K6CLSTGF1bVMO5PDSZdm8n" />
+            <Link Id="QJKDDHj0jskLRfCFqRwLIa" Ids="NxpsbUX9mgjNG0swLAK9Rz,F0pcfCRkP0ILmo2esA3F06" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
