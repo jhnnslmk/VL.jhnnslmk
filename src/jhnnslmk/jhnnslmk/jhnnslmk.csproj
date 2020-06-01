@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>F:\_jhnnslmk\Repositories\hub_tracking\vl-libs\VL.jhnnslmk\lib\</OutputPath>
+  </PropertyGroup>
+
+</Project>
