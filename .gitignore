@@ -1,3 +1,7 @@
 /src/jhnnslmk/jhnnslmk/obj/
 /lib/
 /.vl/
+/src/**/bin/Debug/*
+/netstandard2.0/*
+*.suo
+**/.vs/*
